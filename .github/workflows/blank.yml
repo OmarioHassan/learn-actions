@@ -39,4 +39,4 @@ jobs:
       - name: check for Angular
         run: |
           echo is angular installed?,
-          echo ng v.          
+          ng v.          
