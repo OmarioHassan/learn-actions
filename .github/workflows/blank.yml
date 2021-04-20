@@ -6,9 +6,9 @@ name: Learn Github Actions
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [main]
+    branches: [test]
   pull_request:
-    branches: [main]
+    branches: [test]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -16,7 +16,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  Test commit messages:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -29,7 +29,7 @@ jobs:
         uses: gsactions/commit-message-checker@v1
         with:
           pattern: '[feat|fix]\(.*\)$'
-          flags: 'gm'
+          flags: 'g'
           error: 'Your first line has to contain a commit type like "[BUGFIX]".'
 
       # Runs a single command using the runners shell
