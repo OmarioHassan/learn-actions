@@ -3,7 +3,7 @@
 ### Skipping workflow runs
 you can use `[no ci]` in your commit message like `git commit -m 'my new commit message [no ci]'`
 
-###Protecting the master branch
+### Protecting the master branch
 
 
 
