@@ -1,6 +1,6 @@
 name: 'Set Issue Label'
 on:
-  issues_comment:
+  issue_comment:
     types: [created]
 
 jobs:
@@ -11,5 +11,4 @@ jobs:
         with:
           keywords: '["help", "wanted"]'
           labels: '["help wanted"]'
-          assignees: '["OmarioHasam"]'
           github-token: '${{ secrets.GITHUB_TOKEN }}'
