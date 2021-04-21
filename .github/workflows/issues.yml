@@ -1,14 +1,19 @@
-name: 'Set Issue Label'
+name: 'Set Issue Label and Assignee'
 on:
-  issue_comment:
-    types: [created]
+  issues:
+    types: [opened]
+  pull_request:
+    typed: [opened]
 
 jobs:
-  Set_Label:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - uses: Amwam/issue-comment-action@v1.3.1
+      - uses: Naturalclar/issue-action@v2.0.2
         with:
-          keywords: '["help", "wanted"]'
-          labels: '["help wanted"]'
+          title-or-body: 'both'
+          parameters: '[
+            {"keywords": ["bug", "error"], "labels": ["BUG"], "assignees": ["OmarioHasan"]},
+            {"keywords": ["help", "guidance"], "labels": ["help-wanted"], "assignees": ["OmarioHasan"]}
+            ]'
           github-token: '${{ secrets.GITHUB_TOKEN }}'
