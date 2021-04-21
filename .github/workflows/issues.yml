@@ -4,7 +4,7 @@ on:
     types: [created]
 
 jobs:
-  set_label:
+  Set_Label:
     runs-on: ubuntu-latest
     steps:
       - uses: Amwam/issue-comment-action@v1.3.1
