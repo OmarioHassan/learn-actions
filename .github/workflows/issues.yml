@@ -1,0 +1,15 @@
+name: 'Set Issue Label'
+on:
+  issues_comment:
+    types: [created]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Amwam/issue-comment-action@v1.3.1
+        with:
+          keywords: '["help", "wanted"]'
+          labels: '["help wanted"]'
+          assignees: '["OmarioHasam"]'
+          github-token: '${{ secrets.GITHUB_TOKEN }}'

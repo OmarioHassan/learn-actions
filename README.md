@@ -11,4 +11,4 @@ you can use `[no ci]` in your commit message like `git commit -m 'my new commit 
 3. Click on `Add rule`
 4. Set your prefered privilages on your prefered branch
 
-you can also see this [link](https://cityofaustin.github.io/ctm-dev-workflow/protected-branches.html)
+You can also see this [link](https://cityofaustin.github.io/ctm-dev-workflow/protected-branches.html)
